@@ -1,15 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+<div>
+ <h1>Tic Tac Toe</h1>
+ <Player />
+<Board /> 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Board from './components/Board.vue'
+import Player from './components/Player.vue'
+import Square from './components/Square.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Board,
+    Player,
+    Square
   }
 }
 </script>
+
+<style scoped>
+
+h1{
+  color: black;
+}
+
+</style>
