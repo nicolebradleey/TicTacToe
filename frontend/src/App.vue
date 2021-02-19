@@ -1,21 +1,30 @@
 <template>
+  
+
 <div>
  <h1>Tic Tac Toe</h1>
- <Player />
-<Board /> 
+
+<Board @rerender="keyUpdate" :key="keyCounter" /> 
 </template>
 
 <script>
 import Board from './components/Board.vue'
-import Player from './components/Player.vue'
-import Square from './components/Square.vue'
+
 
 export default {
   name: 'App',
+  data(){
+    return{
+      keyCounter: 0
+    }
+  },
   components: {
-    Board,
-    Player,
-    Square
+    Board
+  },
+  methods: {
+    keyUpdate() {
+      this.keyCounter++  //when key is changed it automatically re-renders the component, changes upon reset() in board
+    }
   }
 }
 </script>
@@ -23,7 +32,8 @@ export default {
 <style scoped>
 
 h1{
-  color: black;
+  color: whitesmoke;
+  display:ruby-text;
 }
 
 </style>
