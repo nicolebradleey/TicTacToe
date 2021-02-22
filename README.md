@@ -1,6 +1,6 @@
 # TicTacToe
  A game of tictactoe.
  
- In terminal:
+ Open terminal and enter:
  cd frontend
  npm run dev
